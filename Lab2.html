@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Untitled-2.css">
+</head>
+<body id="top">
+
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="aary.jpeg" alt="A profile photo of me" class="profile-pic">
+                <div>
+                    <p>Hello! My name is Aaryan Jha. I am learning web development and this is my portfolio website using CSS.</p>
+                    <p>I'm very excited about creating clean and responsive websites. I'm currently focusing on building my skills in HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="separator">
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Learning</td>
+                    </tr>
+                    <tr>
+                        <td>Responsive Design</td>
+                        <td>Beginner</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <hr class="separator">
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>A simple portfolio built with use of CSS and HTML.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>A replica of razorpay official website. This project helped me practice CSS Flexbox.</p>
+            </div>
+        </section>
+
+     
+        <hr class="separator">
+
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+                
+                <button type="submit" class="custom-button">Submit</button>
+            </form>
+        </section>
+    </main>
+
+  
+    <footer>
+        <p>&copy; 2025 Aaryan Jha. All rights reserved.</p>
+    </footer>
+
+    <a href="#top" id="back-to-top" title="Back to Top">&uarr;</a>
+
+</body>
+</html>

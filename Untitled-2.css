@@ -1,0 +1,288 @@
+
+
+/* --- 1. Root Variables (Color Theme & Fonts) --- */
+:root {
+    --primary-color: #4A148C;    /* Deep Purple */
+    --secondary-color: #7E57C2;  /* Medium Purple */
+    --background-color: #F3E5F5; /* Light Lavender */
+    --card-background: #FFFFFF;   /* White */
+    --text-color: #333333;
+    --light-text-color: #FFFFFF;
+    --border-color: #D1C4E9;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* --- 2. General & Body Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    /* Add padding to the top to offset the sticky header */
+    padding-top: 75px; 
+}
+
+h1, h2, h3 {
+    color:white;
+    margin-bottom: 15px;
+}
+
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
+
+p {
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: var(--card-background);
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+/* --- 3. Header & Navigation (position: sticky) --- */
+header {
+    background: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 20px 20px;
+    
+    /* Sticky Navigation */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    display: flex; /* Creates a flex container */
+    
+    justify-content: center; 
+    
+    align-items: center; /* Vertically centers the items */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 2.51em;
+    padding: 8px 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation hover effect */
+nav a:hover,
+nav a:focus {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    outline: none;
+}
+
+/* --- 4. About Me Section --- */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.about-content div {
+    flex: 1; /* Allows text to fill remaining space */
+    min-width: 300px; /* Ensures text doesn't get too squished */
+}
+
+/* --- 5. Skills Table Styling --- */
+#skills table {
+    width: 100%;
+    border-collapse: collapse; /* Merges cell borders */
+    margin-top: 20px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures box-shadow and border-radius work */
+}
+
+#skills th, #skills td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#skills th {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    font-size: 1.1em;
+}
+
+/* Alternating row colors */
+#skills tr:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+#skills tr:hover {
+    background-color: var(--border-color);
+    cursor: default;
+}
+
+/* --- 6. Projects Section --- */
+.project-card {
+    background: #fdfcff; /* Slightly off-white */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 6px solid var(--primary-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+/* --- 7. Contact Form & Button Styling --- */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: var(--font-primary);
+    font-size: 1em;
+    background: #fdfcff;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 2px solid var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Custom Button Styling */
+.custom-button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-family: var(--font-primary);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.custom-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 8. Visual Separator (Styled HR) --- */
+hr.separator {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, 
+        rgba(74, 20, 140, 0), 
+        rgba(74, 20, 140, 0.75), 
+        rgba(74, 20, 140, 0)
+    );
+    margin: 40px 0;
+}
+
+/* --- 9. Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6dced;
+    color: var(--primary-color);
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+/* --- 10. Positioning (position: fixed) --- */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 100;
+}
+
+#back-to-top:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
